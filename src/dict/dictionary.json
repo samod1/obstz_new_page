@@ -1,0 +1,19 @@
+[
+    {"lang":"sk", "key":"heading", "value":"Oblastný stolnotenisový zväz Trnava"},
+    {"lang":"en", "key":"heading", "value":"Trnava region table tennis association"},
+    {"lang":"sk", "key":"home", "value":"Domov"},
+    {"lang":"en", "key":"home", "value":"Home"},
+    {"lang":"sk", "key":"exe-board", "value":"Výkonny výbor"},
+    {"lang":"en", "key":"exe-board", "value":"Executive board"},
+    {"lang":"sk", "key":"chairman", "value":"Predseda"},
+    {"lang":"en", "key":"chairman", "value":"Chairman"},
+    {"lang":"sk", "key":"variabileSymbol", "value":"Variabilný symbol"},
+    {"lang":"en", "key":"variabileSymbol", "value":"Variable symbol"},
+    {"lang":"sk", "key":"exe", "value":"Oblastný zväz"},
+    {"lang":"en", "key":"exe", "value":"Regional Association"},
+    {"lang":"sk", "key":"rankings", "value":"Rebríčky"},
+    {"lang":"en", "key":"rankings", "value":"Rankings"}
+
+
+
+]
