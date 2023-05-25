@@ -1,0 +1,57 @@
+<div class="landing-styles">
+    <header class="masthead-sub"></header>
+    <app-navbar></app-navbar>
+    <div class="container">
+        <p style="font-size: 100pt; color: red; font-weight: bolder; text-align: center;">Experimentalna verzia</p>
+    <form [formGroup]="qrForm">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8">
+                    <div class="mb-2 row">
+                        <label class="col-md-4 text-start" cLabel="col" for="klub"><b>Klub</b></label>
+                        <div class="col-md-8">
+                            <select id="klub" class="form-select" aria-label="Default select example" formControlName="club"
+                                checkValidity>
+                                <option *ngFor="let club of clubs" [value]="club.value">{{club.label}}</option>
+                            </select>
+                        <app-validation-message class="text-start" formControlName="club"></app-validation-message>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8">
+                    <div class="mb-2 row">
+                        <label class="col-md-4 text-start" cLabel="col" for="payment"><b>Druh platby</b></label>
+                        <div class="col-md-8">
+                            <select class="form-select" aria-label="Default select example" formControlName="payment"
+                                checkValidity>
+                                <option *ngFor="let payments of payment" [value]="payments.value">{{payments.label}}</option>
+                            </select>
+                            <app-validation-message class="text-start" formControlName="payment"></app-validation-message>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8">
+                    <div class="mb-2 row">
+                        <label class="col-md-4 text-start" cLabel="col" for="money_amount"><b>Mnozstvo Penazi</b></label>
+                        <div class="col-md-8">
+                            <input id="money_amount" formControlName="height_of_payment" placeholder="Platba"
+                                autocomplete="none" [autofocus]="'true'" class="form-control" checkValidity />
+                            <app-validation-message class="text-start" formControlName="height_of_payment"></app-validation-message>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4"><button type="submit" class="btn btn-primary btn-xl" (click)="generatePaymentQR()">Vygenerovat QR kod</button></div>
+                <div class="col-4"></div>
+            </div>
+    </form>
+
+    <p class="text-center">{{clubs.values}}</p>
+
+</div>
+</div>
