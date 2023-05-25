@@ -1,0 +1,10 @@
+<div *ngIf="control.invalid && control.touched">
+    <div *ngIf="getError()?.['required']" class="text-danger">{{formControlName}} je povinne
+    </div>
+    <div *ngIf="getError()?.['isNotEmailRegex']" class="text-danger">
+      {{'isNotEmailRegex' | translate }}
+    </div>
+    <div *ngIf="getError()?.['maxlength']" class="text-danger">
+      {{'max_length' | translate }} {{getError()?.['maxlength']?.requiredLength}}
+    </div>
+  </div>
