@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  ga:"G-77QMJFZP8B"
+  ga:"G-77QMJFZP8B",
+  url: "https://app.bysquare.com/api"
 };
 
 /*
