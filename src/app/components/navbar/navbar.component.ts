@@ -39,7 +39,7 @@ export class NavbarComponent {
   }
   /** zatvorenie komponentu */
   closeNavbar(event? : any){
-    if (event?.target?.id !=="navbarDropdown"){
+    if (event?.target?.id !=="navbarLangDropdown"){
       this.navbarOpen = false;
       this.openLangDropdown = false;
     }else
