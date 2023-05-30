@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators  } from '@angular/forms';
 import { Enumerations } from 'src/app/enums/enumerations';
+import { QrService } from 'src/app/services/qr.service';
 
 @Component({
   selector: 'app-var-symbol',
@@ -10,6 +11,7 @@ import { Enumerations } from 'src/app/enums/enumerations';
 export class VarSymbolComponent implements OnInit {
 
 generatedvariable: number = 0;
+showSuccessfulMessage: boolean = false;
 
   qrForm: UntypedFormGroup = this.fb.group({
     height_of_payment: this.fb.control(null, [Validators.required]),
@@ -23,7 +25,7 @@ payment = Enumerations.payment;
 
 
 
-constructor(private fb: UntypedFormBuilder){}
+constructor(private fb: UntypedFormBuilder, private qrService: QrService){}
 
   ngOnInit(): void {}
 
@@ -31,7 +33,13 @@ constructor(private fb: UntypedFormBuilder){}
   {
      //generatedVariable = this.qrForm.value
 
-    console.log(this.qrForm.value)
+    this.qrService.GetVariabileSymbol(this.qrForm.value).subscribe(data =>{ 
+      
+      this.showSuccessfulMessage = true},
+      error =>{
+
+      });
+      
 
     //let vyskaPlatby = this.qrForm.height_of_payment.value;
 
